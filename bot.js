@@ -21,7 +21,7 @@ const queue = new Map();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`By Luca Changretta |;help`,"http://twitch.tv/S-F")
+client.user.setGame(`By Luca Changretta |*help`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('+[-----------------------------------------------------------------]+')
@@ -47,7 +47,7 @@ client.user.setGame(`By Luca Changretta |;help`,"http://twitch.tv/S-F")
 
 
 const developers = ["412302921972056066","487314985362391060"]
-const adminprefix = ";";
+const adminprefix = "*";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
@@ -278,7 +278,7 @@ function play(guild, song) {
 
 
 client.on("message", message => {
-	if (message.content === ";help") {
+	if (message.content === "*help") {
 	message.channel.send('`**Hi my commands in your DMs !**')
 	 const embed = new Discord.RichEmbed()
 		 .setColor('#1bcfb0')
@@ -286,24 +286,24 @@ client.on("message", message => {
 		 .setThumbnail(message.author.avatarURL)
 		 .setDescription(`
    +[ ---------------------------- ]+
-	       **Prefix : ; **
+	       **Prefix : * **
    +[ ---------------------------- ]+
 
-;play             |Play a song with the given name or url
+*play             |Play a song with the given name or url
 
-;leave            |Disconnect the bot from the voice channel if is in
+*leave            |Disconnect the bot from the voice channel if is in
 
-;pause            |Pause the currently music playing 
+*pause            |Pause the currently music playing 
 
-;resume           |Resume paused music
+*resume           |Resume paused music
 
-;skip             |Skip the currently playing song
+*skip             |Skip the currently playing song
 
-;vol              |Change the current volume
+*vol              |Change the current volume
 
-;np               |Shows what song the bot is currently playing
+*np               |Shows what song the bot is currently playing
 
-;queue            |View the queue
+*queue            |View the queue
   
    `)
    message.author.send(embed);
