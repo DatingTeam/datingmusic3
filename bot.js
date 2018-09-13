@@ -297,7 +297,7 @@ client.on("message", message => {
 
 <resume           |Resume paused music
 
-*skip             |Skip the currently playing song
+<skip             |Skip the currently playing song
 
 <vol              |Change the current volume
 
